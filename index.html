@@ -1,114 +1,99 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>SMASA KER3N</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            margin: 0;
-            padding: 0;
-            color: #003366;
-        }
-        header {
-            background-color: #003366;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #00509e;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 20px;
-        }
-        h2 {
-            color: #00509e;
-        }
-        .question {
-            margin-bottom: 15px;
-        }
-        footer {
-            background-color: #003366;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SMASA CBT</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>SMASA KER3N</h1>
-        <p>Website Pembelajaran Interaktif + CBT</p>
-    </header>
 
-    <nav>
-        <a href="#modul">Modul Belajar</a>
-        <a href="#cbt">CBT</a>
-    </nav>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <h2>📘 SMASA CBT</h2>
+  <p>Memuat konten pembelajaran... ⏳</p>
+</div>
 
-    <section id="modul">
-        <h2>Modul Pembelajaran</h2>
-        <ul>
-            <li><strong>Matematika:</strong> Persamaan Linier Dua Variabel, Himpunan, Relasi dan Fungsi</li>
-            <li><strong>Fisika:</strong> Gaya dan Gerak, Hukum Newton, Energi</li>
-            <li><strong>Biologi:</strong> Sistem Organisasi Kehidupan, Jaringan Tumbuhan dan Hewan</li>
-            <li><strong>Informatika:</strong> Algoritma Dasar, Pengantar Komputer, Jaringan</li>
-        </ul>
-    </section>
+<!-- Konten Utama -->
+<div id="main-content" style="display:none;">
 
-    <section id="cbt">
-        <h2>CBT - Uji Pemahaman</h2>
+<header>
+  <h1>📘 SMASA CBT</h1>
+  <p>Website Pembelajaran & Ujian CBT Siswa SMA</p>
+</header>
 
-        <div class="question">
-            <p><strong>1. Matematika:</strong> Hasil dari 3x + 2 = 11, maka nilai x adalah...</p>
-            <input type="radio" name="q1"> 2<br>
-            <input type="radio" name="q1"> 3<br>
-            <input type="radio" name="q1"> 4<br>
-            <input type="radio" name="q1"> 5<br>
-        </div>
+<nav>
+  <a href="#beranda">🏠 Beranda</a>
+  <a href="#modul">📚 Modul</a>
+  <a href="#cbt">📝 CBT</a>
+  <a href="#kontak">📩 Kontak</a>
+</nav>
 
-        <div class="question">
-            <p><strong>2. Fisika:</strong> Gaya 10 N diberikan pada benda bermassa 2 kg. Percepatan yang dialami benda adalah...</p>
-            <input type="radio" name="q2"> 2 m/s²<br>
-            <input type="radio" name="q2"> 5 m/s²<br>
-            <input type="radio" name="q2"> 10 m/s²<br>
-            <input type="radio" name="q2"> 20 m/s²<br>
-        </div>
+<section id="beranda">
+  <h2>🏫 Selamat Datang!</h2>
+  <p>SMASA CBT adalah platform pembelajaran daring gratis untuk siswa SMA. Dapatkan modul dan latihan soal CBT interaktif di sini.</p>
+</section>
 
-        <div class="question">
-            <p><strong>3. Biologi:</strong> Jaringan tumbuhan yang berfungsi mengangkut air adalah...</p>
-            <input type="radio" name="q3"> Floem<br>
-            <input type="radio" name="q3"> Xilem<br>
-            <input type="radio" name="q3"> Parenkim<br>
-            <input type="radio" name="q3"> Kambium<br>
-        </div>
+<section id="modul">
+  <h2>📚 Modul Pembelajaran SMA</h2>
+  <ul>
+    <li>📐 <strong>Matematika:</strong> Fungsi, Limit, Turunan</li>
+    <li>🧪 <strong>Fisika:</strong> Gerak Lurus, Dinamika, Hukum Newton</li>
+    <li>🧬 <strong>Biologi:</strong> Sel, Jaringan, Sistem Organ</li>
+    <li>💻 <strong>Informatika:</strong> Algoritma, Struktur Data, Komputer Dasar</li>
+  </ul>
+</section>
 
-        <div class="question">
-            <p><strong>4. Informatika:</strong> Yang termasuk perangkat input adalah...</p>
-            <input type="radio" name="q4"> Monitor<br>
-            <input type="radio" name="q4"> Mouse<br>
-            <input type="radio" name="q4"> Printer<br>
-            <input type="radio" name="q4"> Speaker<br>
-        </div>
+<section id="cbt">
+  <h2>📝 Ujian CBT SMA</h2>
 
-        <p><em>*Hanya 4 soal ditampilkan. Total per mapel adalah 25 soal.</em></p>
-    </section>
+  <div class="question">
+    <p><strong>1. Matematika:</strong> Limit dari (x² - 1)/(x - 1) saat x → 1 adalah...</p>
+    <input type="radio" name="q1" value="0"> 0<br>
+    <input type="radio" name="q1" value="2"> 2<br>
+    <input type="radio" name="q1" value="1"> 1<br>
+    <input type="radio" name="q1" value="Tidak ada"> Tidak ada<br>
+  </div>
 
-    <footer>
-        &copy; 2025 SMASA KER3N - Pembelajaran Digital Kelas 8 SMP
-    </footer>
+  <div class="question">
+    <p><strong>2. Fisika:</strong> Hukum Newton II menyatakan bahwa...</p>
+    <input type="radio" name="q2" value="F=ma"> F = ma<br>
+    <input type="radio" name="q2" value="Aksi reaksi"> Aksi = Reaksi<br>
+    <input type="radio" name="q2" value="Gravitasi"> Gaya gravitasi<br>
+    <input type="radio" name="q2" value="Inersia"> Inersia<br>
+  </div>
+
+  <div class="question">
+    <p><strong>3. Biologi:</strong> Organisme uniseluler contohnya...</p>
+    <input type="radio" name="q3" value="Amoeba"> Amoeba<br>
+    <input type="radio" name="q3" value="Manusia"> Manusia<br>
+    <input type="radio" name="q3" value="Katak"> Katak<br>
+    <input type="radio" name="q3" value="Ikan"> Ikan<br>
+  </div>
+
+  <div class="question">
+    <p><strong>4. Informatika:</strong> Struktur data yang mengikuti prinsip FIFO adalah...</p>
+    <input type="radio" name="q4" value="Queue"> Queue<br>
+    <input type="radio" name="q4" value="Stack"> Stack<br>
+    <input type="radio" name="q4" value="Array"> Array<br>
+    <input type="radio" name="q4" value="Tree"> Tree<br>
+  </div>
+
+  <button onclick="checkAnswers()">✅ Cek Jawaban</button>
+  <p id="result"></p>
+</section>
+
+<section id="kontak">
+  <h2>📩 Kontak Kami</h2>
+  <p>Email: smasacbt@sekolah.sch.id</p>
+  <p>Alamat: Jl. Pendidikan No. 45, Blitar</p>
+</section>
+
+<footer>
+  &copy; 2025 SMASA CBT - Platform Ujian Edukatif
+</footer>
+
+</div>
 </body>
 </html>
