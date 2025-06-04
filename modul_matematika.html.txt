@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Modul Matematika - SMASA KER3N</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Modul Matematika</h1>
+    <nav><a href="index.html">← Kembali ke Dashboard</a></nav>
+  </header>
+  <main>
+    <h2>Materi Matematika Kelas 8 SMP</h2>
+    <p>Berikut adalah modul belajar untuk Matematika kelas 8 SMP.</p>
+    <section>
+      <h3>1. Aljabar</h3>
+      <p>Aljabar adalah cabang matematika yang mempelajari simbol dan aturan untuk memanipulasi simbol tersebut.</p>
+    </section>
+    <section>
+      <h3>2. Persamaan Linear</h3>
+      <p>Persamaan linear adalah persamaan yang variabelnya memiliki pangkat satu.</p>
+    </section>
+    <section>
+      <h3>3. Geometri Dasar</h3>
+      <p>Geometri dasar mempelajari bangun datar dan bangun ruang.</p>
+    </section>
+    <p>Untuk menguji pemahaman, silakan coba <a href="cbt_matematika.html">Tes Matematika</a>.</p>
+  </main>
+  <footer>&copy; 2025 SMASA KER3N</footer>
+</body>
+</html>
