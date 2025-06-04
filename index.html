@@ -2,8 +2,8 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SMASA CBT</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMASA CBT - Platform Pembelajaran & CBT SMA</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
@@ -11,89 +11,140 @@
 
 <!-- Loading Screen -->
 <div id="loading-screen">
+  <div class="loader"></div>
   <h2>📘 SMASA CBT</h2>
-  <p>Memuat konten pembelajaran... ⏳</p>
+  <p>Memuat konten, tunggu sebentar...</p>
 </div>
 
-<!-- Konten Utama -->
-<div id="main-content" style="display:none;">
+<!-- Konten utama -->
+<div id="main-content" class="hidden">
 
 <header>
   <h1>📘 SMASA CBT</h1>
-  <p>Website Pembelajaran & Ujian CBT Siswa SMA</p>
+  <p>Platform Pembelajaran dan Ujian CBT untuk SMA</p>
 </header>
 
+<!-- Navbar -->
 <nav>
-  <a href="#beranda">🏠 Beranda</a>
-  <a href="#modul">📚 Modul</a>
-  <a href="#cbt">📝 CBT</a>
-  <a href="#kontak">📩 Kontak</a>
+  <ul class="navbar">
+    <li><a href="#" data-section="beranda">🏠 Beranda</a></li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">📚 Modul ▼</a>
+      <ul class="dropdown-content">
+        <li><a href="#" data-section="modul-matematika">Matematika</a></li>
+        <li><a href="#" data-section="modul-fisika">Fisika</a></li>
+        <li><a href="#" data-section="modul-biologi">Biologi</a></li>
+        <li><a href="#" data-section="modul-informatika">Informatika</a></li>
+      </ul>
+    </li>
+    <li class="dropdown">
+      <a href="#" class="dropbtn">📝 CBT ▼</a>
+      <ul class="dropdown-content">
+        <li><a href="#" data-section="cbt-matematika">Matematika</a></li>
+        <li><a href="#" data-section="cbt-fisika">Fisika</a></li>
+        <li><a href="#" data-section="cbt-biologi">Biologi</a></li>
+        <li><a href="#" data-section="cbt-informatika">Informatika</a></li>
+      </ul>
+    </li>
+    <li><a href="#" data-section="kontak">📩 Kontak</a></li>
+  </ul>
 </nav>
 
-<section id="beranda">
-  <h2>🏫 Selamat Datang!</h2>
-  <p>SMASA CBT adalah platform pembelajaran daring gratis untuk siswa SMA. Dapatkan modul dan latihan soal CBT interaktif di sini.</p>
-</section>
+<!-- Sections -->
+<main>
+  <section id="beranda" class="content-section active">
+    <h2>Selamat datang di SMASA CBT! 🎉</h2>
+    <p>Platform pembelajaran dan ujian berbasis komputer untuk siswa SMA. Pilih modul belajar atau mulai ujian CBT dari menu di atas.</p>
+  </section>
 
-<section id="modul">
-  <h2>📚 Modul Pembelajaran SMA</h2>
-  <ul>
-    <li>📐 <strong>Matematika:</strong> Fungsi, Limit, Turunan</li>
-    <li>🧪 <strong>Fisika:</strong> Gerak Lurus, Dinamika, Hukum Newton</li>
-    <li>🧬 <strong>Biologi:</strong> Sel, Jaringan, Sistem Organ</li>
-    <li>💻 <strong>Informatika:</strong> Algoritma, Struktur Data, Komputer Dasar</li>
-  </ul>
-</section>
+  <!-- Modul belajar per mapel -->
+  <section id="modul-matematika" class="content-section">
+    <h2>📐 Modul Matematika SMA</h2>
+    <p>Materi penting Matematika SMA untuk kelas 10-12.</p>
+    <ul>
+      <li>Fungsi dan Grafik</li>
+      <li>Limit dan Turunan</li>
+      <li>Integral</li>
+      <li>Statistika dan Peluang</li>
+    </ul>
+  </section>
 
-<section id="cbt">
-  <h2>📝 Ujian CBT SMA</h2>
+  <section id="modul-fisika" class="content-section">
+    <h2>🧲 Modul Fisika SMA</h2>
+    <p>Materi penting Fisika SMA untuk kelas 10-12.</p>
+    <ul>
+      <li>Gerak Lurus</li>
+      <li>Hukum Newton</li>
+      <li>Energi dan Usaha</li>
+      <li>Gelombang dan Optik</li>
+    </ul>
+  </section>
 
-  <div class="question">
-    <p><strong>1. Matematika:</strong> Limit dari (x² - 1)/(x - 1) saat x → 1 adalah...</p>
-    <input type="radio" name="q1" value="0"> 0<br>
-    <input type="radio" name="q1" value="2"> 2<br>
-    <input type="radio" name="q1" value="1"> 1<br>
-    <input type="radio" name="q1" value="Tidak ada"> Tidak ada<br>
-  </div>
+  <section id="modul-biologi" class="content-section">
+    <h2>🧬 Modul Biologi SMA</h2>
+    <p>Materi penting Biologi SMA untuk kelas 10-12.</p>
+    <ul>
+      <li>Sel dan Jaringan</li>
+      <li>Genetika</li>
+      <li>Ekosistem</li>
+      <li>Sistem Organ pada Manusia</li>
+    </ul>
+  </section>
 
-  <div class="question">
-    <p><strong>2. Fisika:</strong> Hukum Newton II menyatakan bahwa...</p>
-    <input type="radio" name="q2" value="F=ma"> F = ma<br>
-    <input type="radio" name="q2" value="Aksi reaksi"> Aksi = Reaksi<br>
-    <input type="radio" name="q2" value="Gravitasi"> Gaya gravitasi<br>
-    <input type="radio" name="q2" value="Inersia"> Inersia<br>
-  </div>
+  <section id="modul-informatika" class="content-section">
+    <h2>💻 Modul Informatika Dasar</h2>
+    <p>Materi penting Informatika SMA untuk kelas 10-12.</p>
+    <ul>
+      <li>Algoritma dan Pemrograman</li>
+      <li>Struktur Data</li>
+      <li>Jaringan Komputer</li>
+      <li>Keamanan Siber</li>
+    </ul>
+  </section>
 
-  <div class="question">
-    <p><strong>3. Biologi:</strong> Organisme uniseluler contohnya...</p>
-    <input type="radio" name="q3" value="Amoeba"> Amoeba<br>
-    <input type="radio" name="q3" value="Manusia"> Manusia<br>
-    <input type="radio" name="q3" value="Katak"> Katak<br>
-    <input type="radio" name="q3" value="Ikan"> Ikan<br>
-  </div>
+  <!-- Soal CBT per mapel -->
+  <section id="cbt-matematika" class="content-section">
+    <h2>📝 Ujian CBT Matematika</h2>
+    <form id="form-matematika" class="cbt-form">
+      <!-- soal disini dari script.js -->
+    </form>
+    <button class="submit-btn" onclick="submitQuiz('matematika')">Submit Jawaban 📤</button>
+    <p class="score" id="score-matematika"></p>
+  </section>
 
-  <div class="question">
-    <p><strong>4. Informatika:</strong> Struktur data yang mengikuti prinsip FIFO adalah...</p>
-    <input type="radio" name="q4" value="Queue"> Queue<br>
-    <input type="radio" name="q4" value="Stack"> Stack<br>
-    <input type="radio" name="q4" value="Array"> Array<br>
-    <input type="radio" name="q4" value="Tree"> Tree<br>
-  </div>
+  <section id="cbt-fisika" class="content-section">
+    <h2>📝 Ujian CBT Fisika</h2>
+    <form id="form-fisika" class="cbt-form"></form>
+    <button class="submit-btn" onclick="submitQuiz('fisika')">Submit Jawaban 📤</button>
+    <p class="score" id="score-fisika"></p>
+  </section>
 
-  <button onclick="checkAnswers()">✅ Cek Jawaban</button>
-  <p id="result"></p>
-</section>
+  <section id="cbt-biologi" class="content-section">
+    <h2>📝 Ujian CBT Biologi</h2>
+    <form id="form-biologi" class="cbt-form"></form>
+    <button class="submit-btn" onclick="submitQuiz('biologi')">Submit Jawaban 📤</button>
+    <p class="score" id="score-biologi"></p>
+  </section>
 
-<section id="kontak">
-  <h2>📩 Kontak Kami</h2>
-  <p>Email: smasacbt@sekolah.sch.id</p>
-  <p>Alamat: Jl. Pendidikan No. 45, Blitar</p>
-</section>
+  <section id="cbt-informatika" class="content-section">
+    <h2>📝 Ujian CBT Informatika</h2>
+    <form id="form-informatika" class="cbt-form"></form>
+    <button class="submit-btn" onclick="submitQuiz('informatika')">Submit Jawaban 📤</button>
+    <p class="score" id="score-informatika"></p>
+  </section>
+
+  <section id="kontak" class="content-section">
+    <h2>📩 Kontak Kami</h2>
+    <p>Email: smasacbt@sekolah.sch.id</p>
+    <p>Jl. Pendidikan No. 45, Blitar</p>
+  </section>
+</main>
 
 <footer>
-  &copy; 2025 SMASA CBT - Platform Ujian Edukatif
+  &copy; 2025 SMASA CBT - Platform Pembelajaran & Ujian Online
 </footer>
 
 </div>
+
 </body>
 </html>
