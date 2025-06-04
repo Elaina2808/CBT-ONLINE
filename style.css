@@ -1,47 +1,97 @@
+/* Gaya biru-putih modern */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #f4faff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f8ff;
   color: #003366;
-  margin: 0;
-  padding: 0;
+  margin: 0; padding: 0;
 }
+
 header {
-  background-color: #3399ff;
+  background-color: #00509e;
   color: white;
-  padding: 20px;
+  padding: 1rem;
   text-align: center;
 }
-main {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
+
+header h1 {
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
-.card {
-  background: white;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-left: 5px solid #3399ff;
-  border-radius: 8px;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+
+nav {
+  margin-top: 10px;
 }
-.card ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-.card li {
-  margin: 10px 0;
-}
-.card a {
+
+nav a {
+  color: #cce6ff;
+  margin: 0 10px;
   text-decoration: none;
-  color: #0066cc;
-  font-weight: bold;
+  font-weight: 600;
 }
-.card a:hover {
-  text-decoration: underline;
+
+nav a:hover {
+  color: #ffdd00;
 }
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 footer {
+  background-color: #003366;
+  color: #cce6ff;
   text-align: center;
-  font-size: 0.9em;
-  color: #777;
-  padding: 20px;
+  padding: 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
 }
+
+/* Form soal */
+form {
+  margin-top: 20px;
+}
+
+.soal-block {
+  background: white;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+}
+
+.soal-block p {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+button {
+  background-color: #00509e;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+#hasil {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #00509e;
+}
+
